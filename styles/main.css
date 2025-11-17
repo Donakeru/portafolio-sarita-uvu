@@ -1,0 +1,55 @@
+:root {
+    --tamanno-header: 100px; /* Global variable */
+}
+
+.main_page_background {
+    background-image: linear-gradient(to bottom, #f1d7e8 40%, #fff7f3 60%);
+    width: 100%;
+}
+
+.header {
+    background-color: #fff;
+    width: 100%;
+    height: var(--tamanno-header);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.main_page_photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - var(--tamanno-header));
+}
+
+.main_page_photo img {
+    width: 280px;
+    height: auto;
+    filter: grayscale(100%)
+}
+
+.main_page_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15vh;
+}
+
+.main_page_content img {
+    width: 300px;
+    height: auto;
+}
+
+.main_page_content p {
+    width: 55%;
+    text-align: center;
+}
