@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'garet'; /* Elige un nombre para la fuente */
+    src: url('../assets/fonts/Garet-Book.woff2') format('woff2'),
+         url('../assets/fonts/Garet-Book.woff') format('woff'); /* Incluye los formatos que tengas */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'garet-bold'; /* Elige un nombre para la fuente */
+    src: url('../assets/fonts/Garet-Heavy.woff2') format('woff2'),
+         url('../assets/fonts/Garet-Heavy.woff') format('woff'); /* Incluye los formatos que tengas */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'saritita';
+    src: url('../assets/fonts/Saritita-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background_1 {
+    background-color: #d9abb8;
+    width: 100%;
+}
+
+.background_2 {
+    background-color: #adb5c0;
+    width: 100%;    
+}
+
+.content {
+    padding: 0 10% 10% 10%;
+}
+
+.content h2{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.content p {
+    font-family: 'garet', sans-serif;
+    font-weight: bold;
+    line-height: 3;
+    text-align: justify;
+    color: #525252;
+}
+
+.photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 0;
+    height: 70vh;
+    width: 100%;
+}
+
+.photo_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px 0;
+    height: 70vh;
+    width: 100%;
+}
+
+.auto_photo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auto_photo img {
+    width: 80%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mantel_photo {
+    width: 73%;
+    height: 100%; 
+}
+
+.evaluator_photo {
+    width: 25%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50% / 50%;
+}
+
+.evaluator_photo img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mantel_photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.mantel_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #525252;
+    pointer-events: none;
+}
+
+.mantel_text p {
+    font-family: 'garet', sans-serif;
+    font-size: .6rem;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bld {
+    font-family: 'garet-bold', sans-serif;
+}

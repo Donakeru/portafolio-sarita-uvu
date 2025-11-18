@@ -1,0 +1,17 @@
+:root {
+    --tamanno-header: 100px; /* Global variable */
+}
+
+.header {
+    background-color: #fff;
+    width: 100%;
+    height: var(--tamanno-header);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
