@@ -1,17 +1,154 @@
+
 :root {
-    --tamanno-header: 100px; /* Global variable */
+    --tamanno-header: 100px;
 }
 
+/* ------------------ HEADER ------------------ */
 .header {
-    background-color: #fff;
+    background-color: #e9ecf5;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 300;
+}
+
+/* Contenedor general del menú */
+.menu_container {
     width: 100%;
     height: var(--tamanno-header);
-}
-
-.menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    gap: 20px;
+    position: relative;
 }
+
+/* ------------------ MENÚ DESKTOP ------------------ */
+.menu {
+    display: flex;
+    justify-content: space-evenly; /* Distribución en todo el ancho */
+    align-items: center;
+    width: 100%;
+}
+
+.menu a,
+.dropdown_btn {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* ------------------ DROPDOWN ------------------ */
+.dropdown {
+    position: relative;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background: #e9ecf5;
+    top: 30px;
+    left: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-direction: column;
+    z-index: 20;
+}
+
+.dropdown_content a {
+    padding: 10px;
+    display: block;
+}
+
+/* Mostrar dropdown con clic */
+.dropdown.open .dropdown_content {
+    display: block;
+}
+
+/* ------------------ BOTÓN HAMBURGUESA ------------------ */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 30;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Menú móvil más centrado */
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0; /* lo controlaremos con líneas divisorias */
+        position: absolute;
+        top: var(--tamanno-header);
+        background: #e9ecf5;
+        width: 100%;
+        padding: 0; /* SIN padding para centrar mejor */
+        box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+        z-index: 999;
+        justify-content: center; /* ← centra verticalmente */
+        align-items: center;     /* ← centra horizontalmente */
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    /* Cada elemento del menú tendrá una línea divisoria */
+    .menu a,
+    .dropdown_btn {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc; /* línea divisoria */
+    }
+
+    /* Último elemento sin línea */
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    /* Dropdown móvil SIN movimiento raro */
+    .dropdown_content {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%; /* ← evita el desplazamiento a la izquierda */
+        box-shadow: none;
+        padding: 0;
+        background: #d9ddee; /* un tono suavemente distinto */
+        border-top: 1px solid #ccc;
+    }
+
+    .dropdown_content a {
+        padding: 12px 0;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Dropdown visible con clic */
+    .dropdown.open .dropdown_content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Botón del dropdown en modo móvil */
+    .dropdown_btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+}
+

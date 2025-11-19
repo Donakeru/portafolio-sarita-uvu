@@ -83,7 +83,11 @@
 
 .mantel_photo {
     width: 73%;
-    height: 100%; 
+    height: 100%;
+    position: relative; /* 🔥 Necesario para que el texto sea relativo al mantel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .evaluator_photo {
@@ -127,4 +131,33 @@
 
 .bld {
     font-family: 'garet-bold', sans-serif;
+}
+
+/* Tablet (≤ 1024px) */
+@media screen and (max-width: 1024px) {
+
+    .photo {
+        flex-direction: column;   /* 🔥 Se pone en columna */
+        height: auto;             /* Ajusta altura automáticamente */
+        gap: 30px;                /* Separación entre elementos */
+        margin: 50px 0;
+    }
+
+    .evaluator_photo {
+        width: 60%;               /* Ajusta el tamaño para tablet */
+        max-width: 300px;
+        aspect-ratio: 3 / 4;
+    }
+
+    .mantel_photo {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .mantel_photo img {
+        width: 100%;
+        height: auto;
+    }
+
 }
