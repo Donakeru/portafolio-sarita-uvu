@@ -11,34 +11,7 @@
 <body>
     <div class="background_2">
         
-        <div class="header">
-            <div class="menu_container">
-                <button class="hamburger" aria-label="Abrir menú">
-                    ☰
-                </button>
-
-                <nav class="menu">
-                    <a href="/">Inicio</a>
-                    <a href="#declaracion">Declaración Artística</a>
-                    <a href="#reel">Reel</a>
-                    <a href="#escritos">Escritos</a>
-
-                    <div class="dropdown">
-                        <button class="dropdown_btn">Evaluaciones ▾</button>
-                        <div class="dropdown_content">
-                            <a href="./autoevaluacion.html">autoevaluacion</a>
-                            <a href="./elisa-londono.html">elisa londoño</a>
-                            <a href="./mari-d-marco.html">marianna di marco</a>
-                            <a href="./humberto-canessa.html">humberto canessa</a>
-                            <a href="#">mateo mejia</a>
-                        </div>
-                    </div>
-
-                    <a href="#galeria">Galería</a>
-                    <a href="#contacto">Contacto</a>
-                </nav>
-            </div>
-        </div>
+        <?php include "../../includes/header.php"; ?>
 
         <div class="content">
             <div class="photo">
